@@ -17,12 +17,15 @@ public class AIAssignment3 {
      * @param args the command line arguments
      */
  public static void main(String[] args) throws Exception {
+     
   float[][] train = new float[][]{new float[]{0, 0}, new float[]{0, 1}, new float[]{1, 0}, new float[]{1, 1}};
   float[][] res = new float[][]{new float[]{0}, new float[]{1}, new float[]{1}, new float[]{0}};
   MLP mlp = new MLP(2, new int[]{2, 1});
-  mlp.getLayer(1).setIsSigmoid(false);
+  mlp.getLayer(1).setIsSigmoid(true);
   Random r = new Random();
-  int en = 500;
+  int en = 1000;
+  
+  
   for (int e = 0; e < en; e++) {
 
    for (int i = 0; i < res.length; i++) {
